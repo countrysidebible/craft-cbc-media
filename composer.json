@@ -1,5 +1,5 @@
 {
-    "name": "cbcsouthlake/craft-cbc-media",
+    "name": "countrysidebible/craft-cbc-media",
     "description": "Get the CBC Media Feed",
     "type": "craft-plugin",
     "keywords": [
@@ -13,7 +13,7 @@
     "authors": [
         {
             "name": "Andrew Hale",
-            "email": "31710075+cbcsouthlake@users.noreply.github.com"
+            "email": "31710075+countrysidebible@users.noreply.github.com"
         }
     ],
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-          "cbcsouthlake\\craftcbcmedia\\": "src/"
+          "countrysidebible\\craftcbcmedia\\": "src/"
         }
     },
     "extra": {
@@ -29,7 +29,7 @@
         "handle": "craft-cbc-media",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/cbcsouthlake/craft-cbc-media/master/CHANGELOG.md",
-        "class": "cbcsouthlake\\craftcbcmedia\\CraftCbcMedia"
+        "changelogUrl": "https://raw.githubusercontent.com/countrysidebible/craft-cbc-media/master/CHANGELOG.md",
+        "class": "countrysidebible\\craftcbcmedia\\CraftCbcMedia"
     }
 }

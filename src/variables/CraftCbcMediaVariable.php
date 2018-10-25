@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Andrew Hale
  */
 
-namespace cbcsouthlake\craftcbcmedia\variables;
+namespace countrysidebible\craftcbcmedia\variables;
 
-use cbcsouthlake\craftcbcmedia\CraftCbcMedia;
+use countrysidebible\craftcbcmedia\CraftCbcMedia;
 
 use Craft;
 
