@@ -1,0 +1,35 @@
+{
+    "name": "cbcsouthlake/craft-cbc-media",
+    "description": "Get the CBC Media Feed",
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft cbc media"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Hale",
+            "email": "31710075+cbcsouthlake@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "cbcsouthlake\\craftcbcmedia\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft CBC Media",
+        "handle": "craft-cbc-media",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/cbcsouthlake/craft-cbc-media/master/CHANGELOG.md",
+        "class": "cbcsouthlake\\craftcbcmedia\\CraftCbcMedia"
+    }
+}
