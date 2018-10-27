@@ -100,11 +100,11 @@ class CraftCbcMediaVariable
     }
     public function transcriptExists($mediacode){
         $date = '20'.preg_replace('/[^0-9,.]/', '', $mediacode);
-        $year = substr($date. 0, -4);
+        $year = substr($date, 0, -4);
 
         $url = 'https://s3.amazonaws.com/media.countrysidebible.org/'.$year.'/'.$mediacode.'transcript.html';
 
-        $return = null;
+        $return = false;
         if((@get_headers($url)[0] == 'HTTP/1.1 404 Not Found') || (@get_headers($url)[0] == 'HTTP/1.1 403 Forbidden')){ 
             // No transcript
         }else{
