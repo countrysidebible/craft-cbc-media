@@ -113,10 +113,19 @@ class CraftCbcMediaVariable
         return $return;
 
     }
+  
 
     public function getTranscript($mediacode){
         $return = null;
         $url =  $this->transcriptExists($mediacode);
+
+        $return = $this->cleanText(file_get_contents($url));
+
+        return $return;
+
+    }
+    public function getTranscriptByUrl($url){
+        $return = null;
 
         $return = $this->cleanText(file_get_contents($url));
 
