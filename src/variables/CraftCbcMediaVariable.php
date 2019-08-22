@@ -79,30 +79,11 @@ class CraftCbcMediaVariable
         return $clean_html;
     }
 
-    public function getFeed()
-    {
-        $url = 'https://api.countrysidebible.org/?return=twu';
-        $mediafeed = file_get_contents($url);
-        $medialist = json_decode($mediafeed, false);
-        $mediaobject = $medialist->twuData;
-    return $mediaobject;
-
-    }
-    public function getSingle($mediacode)
-    {
-        $url = 'https://api.countrysidebible.org/?return=single&mediacode='.$mediacode;
-        $mediafeed = file_get_contents($url);
-        $medialist = json_decode($mediafeed, false);
-        $mediaobject = $medialist->singleEntry[0];
-
-    return $mediaobject;
-
-    }
     public function transcriptExists($mediacode){
-        $date = '20'.preg_replace('/[^0-9,.]/', '', $mediacode);
-        $year = substr($date, 0, -4);
 
-        $url = 'https://s3.amazonaws.com/media.countrysidebible.org/'.$year.'/'.$mediacode.'transcript.html';
+        $year = substr($mediacode, 0, 4);
+
+        $url = 'https://s3.amazonaws.com/media.countrysidebible.org/'.$year.'/'.$mediacode.'_transcript.html';
 
         $return = false;
         if((@get_headers($url)[0] == 'HTTP/1.1 404 Not Found') || (@get_headers($url)[0] == 'HTTP/1.1 403 Forbidden')){ 
